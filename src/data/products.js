@@ -67,17 +67,14 @@ module.exports = [
       { label: 'Dosage form', value: 'Injectable solution' },
       { label: 'Route', value: 'IM' },
       { label: 'Pack', value: '1 mL vial × 1 per box' },
-      {
-        label: 'Storage',
-        value: { value: 'Below 30 °C', confirmed: false, note: 'Source reads "below 30 degrees" — unit not stated.' },
-      },
+      { label: 'Storage', value: 'Below 30 °C' },
       { label: 'Regulatory', value: 'FDA Myanmar · WHO-GMP' },
     ],
     // Source: Amrokort page "Benefits" (wording tidied, meaning unchanged).
     // "Backed by medical professionals" and "Fast action for critical care
     // cases" were NOT carried over — unsupported claims, see CONTENT-NOTES.md.
     uses: ['Reduces inflammation', 'Relief from osteoarthritis and joint pain', 'Alleviates dermatologic conditions'],
-    storage: { value: 'Store below 30 °C.', confirmed: false },
+    storage: { value: 'Store below 30 °C.' },
     regulatory: ['Approved by FDA Myanmar', 'WHO-GMP certified manufacturing', 'For professional medical use'],
     professionalUse: true,
   },

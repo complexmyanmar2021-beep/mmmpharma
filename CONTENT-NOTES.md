@@ -31,7 +31,7 @@ Every fact on the new site comes from the current website or from the product ca
 - The product page read "1 ml <= 50 Ampoules / Box".
 - The carton reads **"1mL x 50 Ampoules"**. The new site shows "1 mL ampoules · 50 ampoules per box".
 
-## 4. Amrokort storage unit ⚠
+## 4. Amrokort storage unit ✅ confirmed by the company (4 November 2026): below 30 °C
 
 - The source says "below 30 degrees" with no unit.
 - The new site shows "Below 30 °C" with a "To be confirmed" chip. Please confirm it against the carton or leaflet.

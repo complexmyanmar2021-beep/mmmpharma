@@ -48,7 +48,8 @@ const faqs = [
   { cat: 'storage', home: true, q: 'How should your products be stored?',
     a: 'Storage conditions are specific to each product and are printed on the box. Oxytocin Injection is stored between 2 °C and 8 °C and protected from light. Amrokort is stored below 30 °C. Always follow the instructions printed on the box, or consult a licensed pharmacist.',
     // Old home-page FAQ said "below 25 °C, protected from light" — superseded by the printed carton (2–8 °C).
-    pending: 'Amrokort storage unit (°C) not stated on the current site.' },
+    // Amrokort "below 30 °C" confirmed by the company on 2026-11-04.
+  },
 
   // ---- Distribution
   { cat: 'distribution', home: true, q: 'Do you sell directly to individuals?',

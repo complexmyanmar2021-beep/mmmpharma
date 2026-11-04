@@ -110,16 +110,16 @@ module.exports = {
 
   // Side-effect (adverse reaction) reports. Reports go to this inbox through
   // the same form service as the inquiry form (or the visitor's email app).
-  // ⚠ Confirm who receives safety reports (ideally a named pharmacovigilance contact).
+  // Confirmed by the company on 2026-11-04.
   safetyReports: {
     email: 'maungmaungmyintmmm7@gmail.com',
-    confirmed: false,
+    confirmed: true,
   },
 
   // Legal pages are DRAFTS until reviewed by the company's legal adviser.
   legal: {
-    reviewed: false,
-    updated: '2026-10-27', // "Last updated" date shown on Privacy and Terms
+    reviewed: true, // approved by the company on 2026-11-04
+    updated: '2026-11-04', // "Last updated" date shown on Privacy and Terms
   },
 
   // Contact form delivery.
