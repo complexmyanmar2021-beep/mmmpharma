@@ -74,22 +74,18 @@ module.exports = {
       confirmed: true, // identical on every page of the current site
     },
 
-    // ⚠ INCONSISTENT on current site — see CONTENT-NOTES.md #1
+    // Confirmed by the company on 2026-11-04 (CONTENT-NOTES.md #1)
     phones: [
-      { number: '+95 9 769 767 666', tel: '+959769767666', source: 'Home page contact section; Contact page "Urgent help"', confirmed: false },
-      { number: '+95 9 966 766 666', tel: '+959966766666', source: 'Home page contact section', confirmed: false },
-      { number: '+95 9 421 025 146', tel: '+959421025146', source: 'Contact page & site footer', confirmed: false },
-      { number: '+95 9 204 4035', tel: '+9592044035', source: 'Contact page & site footer — number looks short, please verify', confirmed: false },
+      { number: '+95 9 421 025 146', tel: '+959421025146', confirmed: true },
+      { number: '+95 9 204 4035', tel: '+9592044035', confirmed: true },
     ],
 
-    // ⚠ INCONSISTENT on current site — see CONTENT-NOTES.md #1
     emails: [
-      { address: 'info@mmmpharma.com', source: 'Home page contact section', confirmed: false },
-      { address: 'maungmaungmyintmmm7@gmail.com', source: 'Contact page & site footer', confirmed: false },
+      { address: 'maungmaungmyintmmm7@gmail.com', confirmed: true },
     ],
 
     // Contact page, "Urgent help"
-    urgentPhone: { number: '+95 9 769 767 666', tel: '+959769767666', confirmed: false },
+    urgentPhone: { number: '+95 9 421 025 146', tel: '+959421025146', confirmed: true },
 
     hours: 'Monday – Friday, 9:00 AM – 5:00 PM',
 
@@ -116,7 +112,7 @@ module.exports = {
   // the same form service as the inquiry form (or the visitor's email app).
   // ⚠ Confirm who receives safety reports (ideally a named pharmacovigilance contact).
   safetyReports: {
-    email: 'info@mmmpharma.com',
+    email: 'maungmaungmyintmmm7@gmail.com',
     confirmed: false,
   },
 
@@ -133,7 +129,7 @@ module.exports = {
   // message pre-filled and addressed to `form.fallbackEmail`.
   form: {
     endpoint: '',
-    fallbackEmail: 'info@mmmpharma.com', // ⚠ confirm which inbox should receive inquiries
+    fallbackEmail: 'maungmaungmyintmmm7@gmail.com', // confirmed company inbox
   },
 
   // Site languages. English is the source; other languages are translated

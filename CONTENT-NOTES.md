@@ -6,19 +6,18 @@ Every fact on the new site comes from the current website or from the product ca
 
 ---
 
-## 1. Contact details differ between pages ⚠ HIGH
+## 1. Contact details ✅ confirmed by the company (4 November 2026)
 
-| Where on the current site | Phone | Email |
+| Where on the old site | Phone | Email |
 |---|---|---|
 | Home page contact section | +95 9 769 767 666, +95 9 966 766 666 | info@mmmpharma.com |
 | Contact page and every footer | +95 9 421 025 146, +95 9 204 4035 | maungmaungmyintmmm7@gmail.com |
 | Contact page, "Urgent help" | +95 9 769 767 666 | none |
 
-- The new site shows **all** numbers and emails and marks them "To be confirmed". None was chosen silently.
-- "+95 9 204 4035" has fewer digits than the others. Please check it.
-- The company's Facebook page artwork (cover photo and posts) lists **+959 421 025 146** and **+959 204 4035**, which supports the Contact-page numbers. The Facebook cover also prints the web address as "www.mmpharma.com" (two m's). Please check that too.
-- The contact form currently falls back to **info@mmmpharma.com**.
-- **To fix:** edit `src/data/site.config.js` → `contact.phones` / `contact.emails`. Delete any wrong entries and set `confirmed: true`. Confirmed numbers are then added automatically to Google structured data.
+- **Confirmed:** phones **+95 9 421 025 146** and **+95 9 204 4035**, email **maungmaungmyintmmm7@gmail.com**, and the Gonyi Residence address.
+- The Home-page numbers (769…, 966…) and info@mmmpharma.com were removed.
+- "Urgent inquiries", the contact form and side-effect reports now use the confirmed number and email.
+- The Facebook cover prints the web address as "www.mmpharma.com" (two m's). Please fix it on Facebook.
 
 ## 2. Oxytocin storage ✅ resolved from packaging
 
