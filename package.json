@@ -5,7 +5,7 @@
   "description": "MMMPharma (Maung Maung Myint Co., Ltd) corporate website — zero-dependency static site generator",
   "scripts": {
     "build": "node build.js",
-    "preview": "node build.js --preview",
+    "preview": "node build.js --preview --out preview",
     "serve": "npx --yes serve dist"
   },
   "engines": { "node": ">=16" }

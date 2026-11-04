@@ -25,7 +25,7 @@ module.exports = {
   //  - 'images' → use local copies in src/images (copied into the build).
   //    Download the files listed in src/images/README.txt into that folder,
   //    then switch this to 'images' before launch.
-  imageBase: process.env.IMAGE_BASE || 'https://mmmpharma.com/images',
+  imageBase: process.env.IMAGE_BASE || 'images',
 
   // Show a small amber "To be confirmed" chip beside unconfirmed facts.
   // Keep `true` while the company reviews the site; set `false` for launch

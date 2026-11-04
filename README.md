@@ -11,14 +11,15 @@ This is the corporate website for **Maung Maung Myint Co., Ltd (MMMPharma)**, a 
 
 ```bash
 node build.js            # production build → dist/  (clean URLs: /about/)
-node build.js --preview  # dist/ with explicit index.html links, for opening from disk
+node build.js --preview --out preview  # preview/ with index.html links, for opening from disk (npm run preview)
 npx serve dist           # optional local server at http://localhost:3000
 ```
 
 The build prints a list of items still waiting for confirmation.
 
-- To view the site straight from disk, run `node build.js --preview` and open `dist/index.html` in a browser.
-- Photos load from the live mmmpharma.com while `imageBase` points there.
+- To view the site straight from disk, run `npm run preview` and open `preview/index.html` in a browser.
+- Never upload `preview/`. Its links only work from disk. Upload `dist/`.
+- Photos and logos live in `src/images/` and are copied into the build.
 
 ## Where to edit things
 
@@ -112,10 +113,27 @@ preview/                 same site with index.html links — double-click previe
 - Lazy-loaded images with fixed dimensions (no layout shift).
 - The Google Map loads only when the visitor clicks "Show map".
 
+## Hosting
+
+`dist/` is the whole website. It contains plain files only, so any static host works.
+
+**GitHub Pages (already set up).** `.github/workflows/pages.yml` rebuilds and publishes the site on every push to `main`.
+1. On GitHub, open the repo's **Settings → Pages** and set **Source** to **GitHub Actions**.
+2. Push to `main`. The site appears at `https://complexmyanmar2021-beep.github.io/mmmpharma/`.
+3. To use mmmpharma.com, enter it under **Settings → Pages → Custom domain** and tick **Enforce HTTPS**. At the domain registrar, add:
+   - `A` records for `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - `CNAME` record for `www` → `complexmyanmar2021-beep.github.io`
+
+GitHub Pages ignores `_redirects` and `.htaccess`. Old URLs (`/pages/...`) still redirect through the HTML fallback pages.
+
+**cPanel / Apache.** Run `node build.js`, then upload the *contents* of `dist/` into `public_html/`. Include the hidden `.htaccess` file. It handles the 404 page and the old-URL redirects.
+
+**Netlify / Cloudflare Pages.** Set the build command to `node build.js` and the output directory to `dist`. `_redirects` is picked up automatically.
+
 ## Launch checklist
 
 - [ ] Resolve the items in `CONTENT-NOTES.md` (contacts, Amrokort storage unit, "For Export Only" cartons).
-- [ ] Download the photos listed in `src/images/README.txt` into `src/images/`, set `imageBase: 'images'`, and rebuild. The build copies them into the site.
+- [x] Download the photos into `src/images/` and set `imageBase: 'images'` (done 2026-11-04).
 - [ ] Set `form.endpoint`.
 - [ ] Confirm the Viber number (`viber`) and the side-effect report inbox (`safetyReports`).
 - [ ] Have a lawyer review `/privacy/` and `/terms/`, then set `legal.reviewed: true`. Until then they are `noindex` and left out of the sitemap.
