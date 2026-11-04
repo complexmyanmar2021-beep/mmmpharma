@@ -1,8 +1,8 @@
 ErrorDocument 404 /404.html
 RewriteEngine On
-RedirectMatch 301 ^/pages/products/?$ /products/
-RedirectMatch 301 ^/pages/about-us/?$ /about/
-RedirectMatch 301 ^/pages/contact-us/?$ /contact/
-RedirectMatch 301 ^/pages/faq/?$ /faqs/
-RedirectMatch 301 ^/pages/oxytocin/?$ /products/oxytocin/
-RedirectMatch 301 ^/pages/amrokort/?$ /products/amrokort/
+RedirectMatch 301 ^/pages/products(/|\.html)?$ /products/
+RedirectMatch 301 ^/pages/about-us(/|\.html)?$ /about/
+RedirectMatch 301 ^/pages/contact-us(/|\.html)?$ /contact/
+RedirectMatch 301 ^/pages/faq(/|\.html)?$ /faqs/
+RedirectMatch 301 ^/pages/oxytocin(/|\.html)?$ /products/oxytocin/
+RedirectMatch 301 ^/pages/amrokort(/|\.html)?$ /products/amrokort/

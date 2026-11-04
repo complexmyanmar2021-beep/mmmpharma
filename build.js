@@ -108,10 +108,10 @@ const legacy = {
   '/pages/oxytocin': '/products/oxytocin/',
   '/pages/amrokort': '/products/amrokort/',
 };
-fs.writeFileSync(path.join(OUT, '_redirects'), Object.entries(legacy).map(([a, b]) => `${a}  ${b}  301`).join('\n') + '\n');
+fs.writeFileSync(path.join(OUT, '_redirects'), Object.entries(legacy).flatMap(([a, b]) => [`${a}  ${b}  301`, `${a}.html  ${b}  301`]).join('\n') + '\n');
 fs.writeFileSync(
   path.join(OUT, '.htaccess'),
-  'ErrorDocument 404 /404.html\nRewriteEngine On\n' + Object.entries(legacy).map(([a, b]) => `RedirectMatch 301 ^${a}/?$ ${b}`).join('\n') + '\n'
+  'ErrorDocument 404 /404.html\nRewriteEngine On\n' + Object.entries(legacy).map(([a, b]) => `RedirectMatch 301 ^${a}(/|\\.html)?$ ${b}`).join('\n') + '\n'
 );
 // HTML fallbacks for hosts without redirect support
 for (const [from, to] of Object.entries(legacy)) {
