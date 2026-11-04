@@ -105,8 +105,8 @@ module.exports = {
 
   // Chat apps. Viber is the main business messenger in Myanmar.
   // Shows a "Chat on Viber" button on every page and on the Contact page.
-  // ⚠ Confirm which number has Viber. Set `viber: null` to hide the button.
-  viber: { number: '+95 9 421 025 146', tel: '+959421025146', confirmed: false },
+  // Confirmed by the company on 2026-11-04. Set `viber: null` to hide the button.
+  viber: { number: '+95 9 421 025 146', tel: '+959421025146', confirmed: true },
 
   // Side-effect (adverse reaction) reports. Reports go to this inbox through
   // the same form service as the inquiry form (or the visitor's email app).
