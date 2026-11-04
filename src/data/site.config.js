@@ -100,7 +100,7 @@ module.exports = {
   },
 
   social: [
-    { name: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61577323186947', icon: 'facebook' },
+    { name: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61586896157506', icon: 'facebook' },
   ],
 
   // Chat apps. Viber is the main business messenger in Myanmar.
