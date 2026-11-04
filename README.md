@@ -132,12 +132,11 @@ GitHub Pages ignores `_redirects` and `.htaccess`. Old URLs (`/pages/...`) still
 
 ## Launch checklist
 
-- [ ] Resolve the items in `CONTENT-NOTES.md` (contacts, Amrokort storage unit, "For Export Only" cartons).
-- [x] Download the photos into `src/images/` and set `imageBase: 'images'` (done 2026-11-04).
-- [ ] Set `form.endpoint`.
-- [ ] Confirm the Viber number (`viber`) and the side-effect report inbox (`safetyReports`).
-- [ ] Have a lawyer review `/privacy/` and `/terms/`, then set `legal.reviewed: true`. Until then they are `noindex` and left out of the sitemap.
-- [ ] Replace the sample articles, or leave them unlinked until real ones exist.
-- [ ] Set `showPendingFlags: false`.
-- [ ] Run `node build.js` and upload `dist/`.
+- [x] Contact details, Viber number, safety-report inbox and Amrokort storage confirmed by the company (2026-11-04).
+- [x] Photos hosted locally in `src/images/` (2026-11-04).
+- [x] Privacy Policy and Terms of Use approved (`legal.reviewed: true`).
+- [x] "To be confirmed" chips hidden (`showPendingFlags: false`).
+- [x] Sample articles hidden (`status: draft`). To publish an article, set `status: published`.
+- [ ] Optional: set `form.endpoint` so inquiries arrive by email without opening the visitor's email app.
+- [ ] Point mmmpharma.com at the host (see **Hosting** above).
 - [ ] Submit `https://mmmpharma.com/sitemap.xml` in Google Search Console.

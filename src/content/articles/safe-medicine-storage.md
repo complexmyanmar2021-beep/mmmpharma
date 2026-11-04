@@ -5,7 +5,7 @@ category: Medicine Storage
 date: 2026-09-30
 author: MMMPharma Editorial Team
 summary: Sample article layout for a storage guide. Final content to be written and reviewed by a qualified pharmacist.
-status: demo
+status: draft
 ---
 
 > This is a sample article that shows the layout of the Health & Knowledge section. It contains no medical guidance. Replace it with reviewed content before launch.

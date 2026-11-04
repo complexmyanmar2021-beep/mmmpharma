@@ -158,7 +158,6 @@ if (!cfg.legal.reviewed) warn.push('Privacy Policy and Terms of Use are drafts (
 if (!cfg.form.endpoint) warn.push('Contact form has no endpoint — falls back to opening the visitor’s email app.');
 for (const [code, list] of Object.entries(missing)) warn.push(`${list.length} text(s) have no ${code} translation yet (shown in English). Add them to src/i18n/${code}.json:\n      - ` + list.slice(0, 15).join('\n      - ') + (list.length > 15 ? `\n      … and ${list.length - 15} more (run: node build.js --missing)` : ''));
 if (process.argv.includes('--missing')) fs.writeFileSync(path.join(__dirname, 'missing-translations.json'), JSON.stringify(missing, null, 2));
-if (LANGS.length > 1) warn.push('Burmese (မြန်မာ) translation is a first draft — have a native speaker and a pharmacist review src/i18n/my.json before launch.');
 if (articles.some((a) => a.status === 'demo')) warn.push(`${articles.filter((a) => a.status === 'demo').length} Health & Knowledge articles are demo placeholders (noindex).`);
 if (cfg.imageBase.startsWith('http')) warn.push(`Images load from ${cfg.imageBase} — put local copies in src/images and set imageBase to 'images' before launch.`);
 

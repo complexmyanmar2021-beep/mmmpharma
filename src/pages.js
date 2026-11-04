@@ -142,7 +142,7 @@ function home(ctx) {
 ${valuesSection(ctx)}
 
 ${B.logoStrip(ctx)}
-
+${articles.length ? `
 <section class="section section--cream" aria-labelledby="hk-title">
   <div class="container">
     <div class="section__head">
@@ -151,7 +151,7 @@ ${B.logoStrip(ctx)}
     </div>
     <div class="agrid">${articles.slice(0, 3).map((a) => B.articleCard(ctx, a)).join('')}</div>
   </div>
-</section>
+</section>` : ''}
 
 <section class="section" aria-labelledby="news-title">
   <div class="container">
@@ -398,13 +398,13 @@ ${pageHero(ctx, { crumbs, eyebrow: 'Health & Knowledge', title: 'Health informat
   <div class="container">
     <h2 class="sr-only" id="articles-title">Articles</h2>
     ${ctx.articles.some((a) => a.status === 'demo') ? `<div class="notice notice--demo">${icon('info')}<p><strong>Sample content.</strong> The articles below are layout samples. They will be replaced with articles written or reviewed by qualified healthcare professionals.</p></div>` : ''}
-    <div class="filters" role="group" aria-label="Filter articles by category" data-filters>
+    ${ctx.articles.length ? `<div class="filters" role="group" aria-label="Filter articles by category" data-filters>
       <button type="button" class="filter" aria-pressed="true" data-filter="all">All topics</button>
       ${company.healthCategories.map((c) => `<button type="button" class="filter" aria-pressed="false" data-filter="${esc(c)}"${used.has(c) ? '' : ' data-empty'}>${esc(c)}</button>`).join('')}
-    </div>
+    </div>` : ''}
     ${feat ? B.articleCard(ctx, feat, { featured: true }) : ''}
     <div class="agrid" data-article-grid>${rest.map((a) => B.articleCard(ctx, a)).join('')}</div>
-    <p class="empty" data-empty-msg hidden>No articles in this category yet. New articles are added regularly.</p>
+    ${ctx.articles.length ? '<p class="empty" data-empty-msg hidden>No articles in this category yet. New articles are added regularly.</p>' : '<p class="empty">New articles are added regularly.</p>'}
   </div>
 </section>
 

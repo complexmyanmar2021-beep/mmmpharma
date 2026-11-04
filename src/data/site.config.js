@@ -30,7 +30,7 @@ module.exports = {
   // Show a small amber "To be confirmed" chip beside unconfirmed facts.
   // Keep `true` while the company reviews the site; set `false` for launch
   // (the build will still warn about anything unconfirmed).
-  showPendingFlags: true,
+  showPendingFlags: false,
 
   company: {
     legalName: 'Maung Maung Myint Co., Ltd',

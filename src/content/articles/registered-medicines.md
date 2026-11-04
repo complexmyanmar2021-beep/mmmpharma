@@ -5,7 +5,7 @@ category: Pharmaceutical Awareness
 date: 2026-09-30
 author: MMMPharma Editorial Team
 summary: Sample layout for an awareness article on registered medicines, linked to recent regulatory news. Content pending review.
-status: demo
+status: draft
 ---
 
 > This is a sample article that shows the layout of the Health & Knowledge section. It contains no medical guidance. Replace it with reviewed content before launch.

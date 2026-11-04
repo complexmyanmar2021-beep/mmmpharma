@@ -6,7 +6,7 @@ awareness: World Patient Safety Day
 date: 2026-09-30
 author: MMMPharma Editorial Team
 summary: Sample layout for an awareness-day post. Content, date and theme to be confirmed from the official WHO announcement.
-status: demo
+status: draft
 ---
 
 > This is a sample awareness-day post that shows how MMMPharma can publish content around international health occasions. The official date and yearly theme should be taken from the WHO announcement when the post is written.
