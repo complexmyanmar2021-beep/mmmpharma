@@ -108,7 +108,8 @@ const legacy = {
   '/pages/oxytocin': '/products/oxytocin/',
   '/pages/amrokort': '/products/amrokort/',
 };
-fs.writeFileSync(path.join(OUT, '_redirects'), Object.entries(legacy).flatMap(([a, b]) => [`${a}  ${b}  301`, `${a}.html  ${b}  301`]).join('\n') + '\n');
+// `301!` forces the redirect on Netlify even though the HTML fallback file below exists at that path.
+fs.writeFileSync(path.join(OUT, '_redirects'), Object.entries(legacy).flatMap(([a, b]) => [`${a}  ${b}  301!`, `${a}.html  ${b}  301!`]).join('\n') + '\n');
 fs.writeFileSync(
   path.join(OUT, '.htaccess'),
   'ErrorDocument 404 /404.html\nRewriteEngine On\n' + Object.entries(legacy).map(([a, b]) => `RedirectMatch 301 ^${a}(/|\\.html)?$ ${b}`).join('\n') + '\n'
